@@ -1,0 +1,19 @@
+/* 
+    Document   : style
+    Created on : 17 mai 2013, 13:59:48
+    Author     : Yoldark34 (yoldark@gmail.com)
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+#main {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: blue;
+}
+
