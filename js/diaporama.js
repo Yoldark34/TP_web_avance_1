@@ -5,30 +5,35 @@
 
 $(function() {
 	function Diaporama(id_diapo, imga_size) {
-		var img_size = imga_size;
+		this.img_size = imga_size;
 		this.nb_diapo = $("#" + id_diapo + " ul li").size();
-		var margin = 0;
-		var marginmax = img_size * this.nb_diapo;
-		$("#fleche_gauche").click(function() {
-			margin = margin + img_size;
-			if (margin > 0) {
-				margin = 0;
-			}
-			changeDiapo();
-		});
-		$("#fleche_droite").click(function() {
-			margin = margin - img_size;
-			if (margin === -marginmax) {
-				margin = -marginmax + img_size;
-			}
-			changeDiapo();
-		});
+		this.state = 0;
 
-		function changeDiapo() {
-			$("#liste_actualite").animate({left: margin + 'px'}, 500);
+		//Methods
+		this.previousDiapo = previousDiapo;
+		this.nextDiapo = nextDiapo;
+	}
+
+	function nextDiapo() {
+		if (this.state > -this.nb_diapo + 1) {
+			this.state--;
+			$("#liste_actualite").animate({left: "-=" + this.img_size + 'px'}, 500);
+		}
+	}
+
+	function previousDiapo() {
+		if (this.state !== 0) {
+			this.state++;
+			$("#liste_actualite").animate({left: "+=" + this.img_size + 'px'}, 500);
 		}
 	}
 
 	var d1 = new Diaporama("diapo", 200);
+	$("#fleche_gauche").click(function() {
+		d1.previousDiapo();
+	});
 
+	$("#fleche_droite").click(function() {
+		d1.nextDiapo();
+	});
 });
