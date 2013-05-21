@@ -6,14 +6,139 @@
         Purpose of the stylesheet follows.
 */
 
-root { 
-    display: block;
+body {
+	margin:0;
 }
 
-#main {
+#banner_top {
+	height: 68px;
+	background:url(../images/fond_top.png) no-repeat 50% 0;
+}
+
+#banner_top .center960 {
+	position: relative;
+}
+
+#footer {
+	height: 197px;
+	background:url(../images/footer1.jpg) no-repeat 50% 0;
+}
+
+#content {
+	height: 890px;
+	background:url(../images/bgHeaderMenu_home.jpg) no-repeat 50% 0;
+}
+
+#logo {
+    height: 118px;
+    margin-top: 33px;
+    position: absolute;
+    width: 246px;
+	left: 0px;
+}
+
+.center960 {
 	width: 960px;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: blue;
+	margin: 0 auto;
 }
 
+#form_search {
+	float: left;
+	margin-left: 450px;
+	margin-top: 30px;
+	padding-right: 10px;
+	margin-right: 10px;
+	border-right: dotted white 1px;
+}
+
+#button_search {
+	text-indent: -90000px;
+	width: 26px;
+	height: 23px;
+	background: url(../images/icons/button_search.gif) no-repeat;
+	border-style: none;
+	margin-top: 5px;
+	position: relative;
+}
+
+#form_search label {
+	right: 100%;
+    position: fixed;
+}
+
+#menus_hauts {
+	float: left;
+}
+
+#menus_hauts li{
+	float: left;
+
+
+}
+
+#menus_hauts li a{
+	width: 47px;
+	height: 49px;
+	display: block;
+	text-indent: -90000px;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+#contact {
+	background:url(../images/icons/btContact.png) no-repeat 0 0;
+}
+
+#contact:hover {
+	background:url(../images/icons/btContact.png) no-repeat 0 100%;
+}
+
+#emploi {
+	background:url(../images/icons/btEmploi.png) no-repeat 0 0;
+}
+
+#emploi:hover {
+	background:url(../images/icons/btEmploi.png) no-repeat 0 100%;
+}
+
+#pulication {
+	background:url(../images/icons/btPublication.png) no-repeat 0 0;
+}
+
+#pulication:hover {
+	background:url(../images/icons/btPublication.png) no-repeat 0 100%;
+}
+
+#marche {
+	background:url(../images/icons/btMarchePublic.png) no-repeat 0 0;
+}
+
+#marche:hover {
+	background:url(../images/icons/btMarchePublic.png) no-repeat 0 100%;
+}
+
+#diapo {
+	width: 200px;
+	height: 200px;
+	margin-left: 400px;
+    margin-top: 450px;
+	position: absolute;
+}
+
+#diapo {
+	overflow: hidden;
+}
+
+#diapo ul li {
+	float: left;
+}
+
+#diapo ul {
+	float: left;
+	width: 600px;
+}
+
+#diapo img {
+	width: 200px;
+	height: 200px;
+}
