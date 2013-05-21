@@ -123,13 +123,10 @@ body {
 	margin-left: 400px;
     margin-top: 450px;
 	position: absolute;
-}
-
-#diapo {
 	overflow: hidden;
 }
 
-#diapo ul li {
+#diapo li {
 	float: left;
 }
 
