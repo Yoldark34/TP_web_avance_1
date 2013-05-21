@@ -119,11 +119,15 @@ body {
 
 #diapo {
 	width: 200px;
-	height: 220px;
+	height: 223px;
 	margin-left: 400px;
     margin-top: 450px;
 	position: absolute;
 	overflow: hidden;
+}
+
+#texte_diapo {
+	float: left;
 }
 
 #flesches_diapo {
@@ -140,8 +144,8 @@ body {
 }
 
 #diapo ul {
-	float: left;
 	width: 600px;
+	position: relative;
 }
 
 #diapo ul li img {

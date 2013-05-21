@@ -4,28 +4,31 @@
  */
 
 $(function() {
-	function Diaporama(id_diapo) {
-		var img_size = 200;
+	function Diaporama(id_diapo, imga_size) {
+		var img_size = imga_size;
 		this.nb_diapo = $("#" + id_diapo + " ul li").size();
 		var margin = 0;
 		var marginmax = img_size * this.nb_diapo;
-		$("#diapo_gauche").click(function() {
+		$("#fleche_gauche").click(function() {
 			margin = margin + img_size;
 			if (margin > 0) {
 				margin = 0;
 			}
-			$("#liste_actualite").css("margin-left", margin + "px");
+			changeDiapo();
 		});
-		$("#diapo_droite").click(function() {
+		$("#fleche_droite").click(function() {
 			margin = margin - img_size;
 			if (margin === -marginmax) {
 				margin = -marginmax + img_size;
 			}
-
-			$("#liste_actualite").css("margin-left", margin + "px");
+			changeDiapo();
 		});
+
+		function changeDiapo() {
+			$("#liste_actualite").animate({left: margin + 'px'}, 500);
+		}
 	}
 
-	var d1 = new Diaporama("diapo");
+	var d1 = new Diaporama("diapo", 200);
 
 });
