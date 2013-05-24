@@ -117,21 +117,26 @@ body {
 	background:url(../images/icons/btMarchePublic.png) no-repeat 0 100%;
 }
 
-#diapo {
+.diapo {
 	width: 200px;
 	height: 223px;
-	margin-left: 400px;
+
     margin-top: 450px;
 	position: absolute;
 	overflow: hidden;
 }
 
-#texte_diapo {
+.texte_diapo {
 	float: left;
 }
 
-#flesches_diapo {
+.fleches_diapo {
 	float: right;
+}
+
+.boutons_diapo {
+	float: right;
+	margin-left: 5px
 }
 
 .fleche_diapo {
@@ -139,16 +144,30 @@ body {
 	height: 20px;
 }
 
-#diapo li {
+.bouton_diapo {
+	width: 20px;
+	height: 20px;
+	margin-left: 5px
+}
+
+.diapo li {
 	float: left;
 }
 
-#diapo ul {
+.diapo ul {
 	width: 600px;
 	position: relative;
 }
 
-#diapo ul li img {
+.diapo ul li img {
 	width: 200px;
 	height: 200px;
+}
+
+.align_left {
+	margin-left: 200px;
+}
+
+.align_right {
+	margin-left: 600px;
 }
